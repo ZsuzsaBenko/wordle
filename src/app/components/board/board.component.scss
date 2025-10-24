@@ -1,0 +1,138 @@
+@use "colors";
+@use "media-queries";
+@use "mixins";
+
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    .line {
+        display: flex;
+        flex-wrap: nowrap;
+
+        &.active .letter {
+            background-color: colors.$white;
+            color: colors.$dark-grey;
+        }
+
+        &.finished .letter {
+            background-color: colors.$light-grey;
+            color: colors.$white;
+        }
+
+        .letter {
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            border: none;
+            box-shadow: 0 0 4px colors.$middle-grey;
+            border-radius: 5px;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px colors.$green;
+            }
+
+            &.yellow {
+                background-color: colors.$yellow;
+                color: white;
+            }
+
+            &.green {
+                background-color: colors.$green;
+                color: white;
+            }
+
+            &.red {
+                color: colors.$red;
+            }
+        }
+    }
+}
+
+:host.wordle .board {
+    .line .letter {
+        @include mixins.letter(36px, 40px, 10px 6px, 24px, 40px);
+    }
+}
+
+:host.dordle .board {
+    margin: 0 12px;
+
+    @include media-queries.large-mobile-size {
+        margin: 0 16px;
+    }
+
+    @include media-queries.tablet-size {
+        margin: 0 40px;
+    }
+
+    .line .letter {
+        @include mixins.letter(24px, 28px, 6px 3px, 18px, 30px);
+
+        @include media-queries.large-mobile-size {
+            @include mixins.letter(26px, 30px, 8px 4px, 18px, 32px);
+        }
+
+        @include media-queries.tablet-size {
+            @include mixins.letter(36px, 40px, 10px 6px, 24px, 40px);
+        }
+    }
+}
+
+:host.quordle .board {
+    margin: 8px 14px;
+
+    @include media-queries.large-mobile-size {
+        margin: 8px 16px;
+    }
+
+    @include media-queries.tablet-size {
+        margin: 10px 20px;
+    }
+
+    @include media-queries.large-desktop-size {
+        margin: 16px 30px;
+    }
+
+    @include media-queries.large-desktop-size {
+        margin: 0 40px;
+    }
+
+    .line .letter {
+        @include mixins.letter(24px, 24px, 4px 3px, 18px, 26px);
+
+        @include media-queries.large-mobile-size {
+            @include mixins.letter(26px, 30px, 5px 4px, 18px, 32px);
+        }
+
+        @include media-queries.small-desktop-size {
+            @include mixins.letter(28px, 28px, 6px 5px, 20px, 30px);
+        }
+
+        @include media-queries.large-desktop-size {
+            @include mixins.letter(30px, 30px, 10px 6px, 22px, 28px);
+        }
+    }
+
+    & .line:not(.active) .letter {
+        height: 18px;
+        border-radius: 2px;
+        font-size: 14px;
+        line-height: 20px;
+
+        @include media-queries.tablet-size {
+            height: 20px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @include media-queries.large-desktop-size {
+            height: 24px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+}

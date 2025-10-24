@@ -1,0 +1,17 @@
+@if (result().state !== 'SUCCESS') {
+    <div class="result">
+        @if (result().state === 'ALMOST') {
+            <p class="solution">
+                @for (word of wordsToGuess(); track word; let i = $index) {
+                    @if (i < wordsToGuess().length - 1) {
+                        <span [ngClass]="{'guessed': result().guessed[i]}">{{ word }},&nbsp;</span>
+                    } @else {
+                        <span [ngClass]="{'guessed': result().guessed[i]}">{{ word }}</span>
+                    }
+                }
+            </p>
+        } @else {
+            <p class="solution">{{ wordsToGuess().join(', ') }}</p>
+        }
+    </div>
+}

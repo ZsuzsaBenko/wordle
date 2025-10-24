@@ -1,0 +1,58 @@
+<div class="keyboard">
+    @for (letter of keyboard(); let i = $index; track i) {
+        <div class="key">
+            <div class="background">
+                <span class="top-left"
+                      [ngClass]="{
+                        yellow: letter.statuses[0] === 'CONTAINED',
+                        green: letter.statuses[0] === 'CORRECT',
+                        grey: letter.statuses[0] === 'ABSENT'
+                    }">
+                </span>
+                <span class="top-right"
+                      [ngClass]="{
+                        yellow: letter.statuses[1] === 'CONTAINED',
+                        green: letter.statuses[1] === 'CORRECT',
+                        grey: letter.statuses[1] === 'ABSENT'
+                    }">
+                </span>
+                <span class="bottom-left"
+                      [ngClass]="{
+                        yellow: letter.statuses[2] === 'CONTAINED',
+                        green: letter.statuses[2] === 'CORRECT',
+                        grey: letter.statuses[2] === 'ABSENT'
+                    }">
+                </span>
+                <span class="bottom-right"
+                      [ngClass]="{
+                        yellow: letter.statuses[3] === 'CONTAINED',
+                        green: letter.statuses[3] === 'CORRECT',
+                        grey: letter.statuses[3] === 'ABSENT'
+                    }">
+                </span>
+            </div>
+            <button type="button"
+                    class="keyboard-btn"
+                    (click)="addLetter(letter)"
+                    (keydown)="preventDefault($event)"
+                    (keyup)="preventDefault($event)">
+                {{ letter.value }}
+            </button>
+        </div>
+    }
+    <button type="button"
+            class="delete"
+            (click)="deleteLetter()"
+            (keydown)="preventDefault($event)"
+            (keyup)="preventDefault($event)">
+        <ng-icon name="deleteIcon"/>
+    </button>
+    <button type="button"
+            class="submit"
+            (click)="submit()"
+            (keydown)="preventDefault($event)"
+            (keyup)="preventDefault($event)">
+        <ng-icon name="enterIcon"/>
+    </button>
+</div>
+

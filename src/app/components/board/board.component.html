@@ -1,0 +1,21 @@
+<div class="board">
+    @for (line of board().lines; let i = $index; track (boardNumber() + '-' + i)) {
+        <div class="line"
+             [ngClass]="{
+             'active': line.status === lineStatusEnum.ACTIVE,
+             'finished': line.status === lineStatusEnum.FINISHED
+             }">
+            @let word = line.word;
+            @for (letter of word; let j = $index; track j) {
+                <div class="letter"
+                     [ngClass]="{
+                     'yellow': line.status === lineStatusEnum.FINISHED &&  letter.status === 'CONTAINED',
+                     'green': line.status === lineStatusEnum.FINISHED && letter.status === 'CORRECT',
+                     'red': showError() && line.status === lineStatusEnum.ACTIVE
+                     }">
+                    {{ letter.value }}
+                </div>
+            }
+        </div>
+    }
+</div>

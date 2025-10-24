@@ -1,0 +1,25 @@
+@use "colors";
+@use "media-queries";
+
+.result {
+    text-align: center;
+    margin: 10px auto 50px;
+
+    @include media-queries.tablet-size {
+        margin: 20px auto 50px;
+    }
+
+    p {
+        color: colors.$white;
+        font-size: 16px;
+        font-weight: bold;
+
+        @include media-queries.small-desktop-size {
+            font-size: 18px;
+        }
+
+        & span.guessed {
+            color: colors.$green;
+        }
+    }
+}
