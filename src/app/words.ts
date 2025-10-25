@@ -53,13 +53,14 @@ export const WORDS = {
     ],
     'D': [
         'DACOL', 'DACOS', 'DADOG', 'DAFKE', 'DAGAD', 'DAJKA', 'DALIA', 'DALOL', 'DALOS', 'DALMŰ', 'DAMIL', 'DARAB', 'DARÁL', 'DARÓC',
-        'DARTS', 'DARUS', 'DATÁL', 'DAUER', 'DÁCSA', 'DÁRDA', 'DÁTUM', 'DECIS', 'DECIZ', 'DEKÁD', 'DELEJ', 'DELEL', 'DELTA', 'DENIM',
-        'DERBI', 'DERES', 'DERÉK', 'DERÍT', 'DERÜL', 'DERŰS', 'DETTÓ', 'DÉKÁN', 'DÉMON', 'DÉNÁR', 'DÉVAJ', 'DÉZSA', 'DICSŐ', 'DIÉTA',
-        'DILIS', 'DINGÓ', 'DIÓDA', 'DIÓFA', 'DIVAT', 'DÍJAZ', 'DÍLER', 'DÍNÁR', 'DÍVIK', 'DÍZEL', 'DOBÁL', 'DOBÁS', 'DOBOG', 'DOBOL',
-        'DOBOS', 'DOBOZ', 'DOGMA', 'DOHOG', 'DOHOS', 'DOLOG', 'DONGA', 'DONGÓ', 'DONNA', 'DONOR', 'DOSZT', 'DOTÁL', 'DÓZIS', 'DÓZSE',
-        'DÖCÖG', 'DÖFÉS', 'DÖGÖS', 'DÖNGŐ', 'DÖNTŐ', 'DÖREJ', 'DÖRGŐ', 'DÖRÖG', 'DŐLÉS', 'DÖLYF', 'DRÁGA', 'DRÁMA', 'DRUKK', 'DUDÁL',
-        'DUDÁS', 'DUDOR', 'DUDVA', 'DUETT', 'DUGÁS', 'DUGIG', 'DUGÓS', 'DUGUL', 'DUHAJ', 'DUKÁL', 'DUKÁT', 'DUMÁL', 'DUMÁS', 'DUNDI',
-        'DUNNA', 'DUPLA', 'DURVA', 'DÚCOL', 'DÚDOL', 'DUSÍT', 'DÚSUL', 'DÚVAD', 'DÜHÍT', 'DÜHÖS', 'DZSEM', 'DZSIP', 'DZSÚZ'
+        'DARTS', 'DARUS', 'DATÁL', 'DAUER', 'DÁCSA', 'DÁLIA', 'DÁRDA', 'DÁTUM', 'DECIS', 'DECIZ', 'DEKÁD', 'DELEJ', 'DELEL', 'DELTA',
+        'DENIM', 'DERBI', 'DERES', 'DERÉK', 'DERÍT', 'DERÜL', 'DERŰS', 'DETTÓ', 'DÉKÁN', 'DÉMON', 'DÉNÁR', 'DÉVAJ', 'DÉZSA', 'DICSŐ',
+        'DIÉTA', 'DILIS', 'DINGÓ', 'DINKA', 'DIÓDA', 'DIÓFA', 'DIVAT', 'DÍJAZ', 'DÍLER', 'DÍNÁR', 'DÍVIK', 'DÍZEL', 'DOBÁL', 'DOBÁS',
+        'DOBOG', 'DOBOL', 'DOBOS', 'DOBOZ', 'DOGMA', 'DOHOG', 'DOHOS', 'DOLOG', 'DONGA', 'DONGÓ', 'DONNA', 'DONOR', 'DOSZT', 'DOTÁL',
+        'DÓZIS', 'DÓZSE', 'DÖCÖG', 'DÖFÉS', 'DÖGÖS', 'DÖNGŐ', 'DÖNTŐ', 'DÖREJ', 'DÖRGŐ', 'DÖRÖG', 'DŐLÉS', 'DÖLYF', 'DRÁGA', 'DRÁMA',
+        'DRUKK', 'DUDÁL', 'DUDÁS', 'DUDOR', 'DUDVA', 'DUETT', 'DUGÁS', 'DUGIG', 'DUGÓS', 'DUGUL', 'DUHAJ', 'DUKÁL', 'DUKÁT', 'DUMÁL',
+        'DUMÁS', 'DUNDI', 'DUNNA', 'DUPLA', 'DURVA', 'DÚCOL', 'DÚDOL', 'DUSÍT', 'DÚSUL', 'DÚVAD', 'DÜHÍT', 'DÜHÖS', 'DZSEM', 'DZSIP',
+        'DZSÚZ'
     ],
     'E': [
         'EBADÓ', 'EBBEN', 'EBBŐL', 'ECSET', 'EDDIG', 'EDÉNY', 'EDZÉS', 'EFELÉ', 'EGÉSZ', 'EGRES', 'EGYBE', 'EGYED', 'EGYEL', 'EGYEN',
@@ -126,11 +127,11 @@ export const WORDS = {
     ],
     'I': [
         'IÁZÁS', 'IÁZIK', 'IBRIK', 'IDÁIG', 'IDEAD', 'IDEÁL', 'IDEÁT', 'IDEÉR', 'IDEGI', 'IDEJE', 'IDEÚT', 'IDÉBB', 'IDÉNY', 'IDILL',
-        'IDŐSB', 'IDÜLT', 'IFJÚI', 'IGAZI', 'IGETŐ', 'IGÉNY', 'IHATÓ', 'IHLET', 'IJEDT', 'IKRÁS', 'IKTAT', 'ILLAN', 'ILLAT', 'ILLEM',
-        'ILLET', 'ILLIK', 'ILYEN', 'IMÁDÓ', 'IMÁGÓ', 'IMÁZS', 'IMÉNT', 'IMMÁR', 'IMOLA', 'INDEX', 'INDÍT', 'INDOK', 'INDUL', 'INDUS',
-        'INGAT', 'INGÁS', 'INGER', 'INNEN', 'INPUT', 'INTÉS', 'INTÉZ', 'INTIM', 'IPARI', 'IRÁNY', 'IRÁNT', 'IRIGY', 'IRKÁL', 'IRODA',
-        'IRTÁS', 'ISLER', 'ISMER', 'ISMÉT', 'ISPÁN', 'ISTEN', 'ISZAP', 'ISZÁK', 'ISZIK', 'ITATÓ', 'ITTAS', 'ITTEN', 'ITYEG', 'IVÓLÉ',
-        'IVRIT', 'IZÉKE', 'IZGAT', 'IZGUL', 'IZMOS', 'IZMUS', 'IZZAD', 'IZZÁS', 'IZZIK', 'IZZÍT'
+        'IDŐSB', 'IDÜLT', 'IFJÚI', 'IGAZI', 'IGETŐ', 'IGÉNY', 'IGÉZŐ', 'IHATÓ', 'IHLET', 'IJEDT', 'IKRÁS', 'IKTAT', 'ILLAN', 'ILLAT',
+        'ILLEM', 'ILLET', 'ILLIK', 'ILYEN', 'IMÁDÓ', 'IMÁGÓ', 'IMÁZS', 'IMÉNT', 'IMMÁR', 'IMOLA', 'INDEX', 'INDÍT', 'INDOK', 'INDUL',
+        'INDUS', 'INGAT', 'INGÁS', 'INGER', 'INNEN', 'INPUT', 'INTÉS', 'INTÉZ', 'INTIM', 'IPARI', 'IRÁNY', 'IRÁNT', 'IRIGY', 'IRKÁL',
+        'IRODA', 'IRTÁS', 'ISLER', 'ISMER', 'ISMÉT', 'ISPÁN', 'ISTEN', 'ISZAP', 'ISZÁK', 'ISZIK', 'ITATÓ', 'ITTAS', 'ITTEN', 'ITYEG',
+        'IVÓLÉ', 'IVRIT', 'IZÉKE', 'IZGAT', 'IZGUL', 'IZMOS', 'IZMUS', 'IZZAD', 'IZZÁS', 'IZZIK', 'IZZÍT'
     ],
     'Í': [
         'ÍBISZ', 'ÍJÁSZ', 'ÍJHÚR', 'ÍNSÉG', 'ÍRISZ', 'ÍRMAG', 'ÍRNOK', 'ÍROTT', 'ÍRÓNŐ', 'ÍTÉSZ', 'ÍVELT', 'ÍZELT', 'ÍZLEL', 'ÍZLÉS',
@@ -246,9 +247,9 @@ export const WORDS = {
         'PLÁNE', 'PLÁZA', 'PLEXI', 'PLUSZ', 'PLÜSS', 'POCAK', 'POCOK', 'POÉTA', 'POFÁS', 'POFON', 'POFOZ', 'POHÁR', 'POHOS', 'POKOL',
         'POLIP', 'POLKA', 'POMPA', 'PONTY', 'POPSI', 'PORHÓ', 'PORÍT', 'PORNÓ', 'POROL', 'POROS', 'POROZ', 'PORTA', 'PORTÓ', 'PORZÓ',
         'POSTA', 'POSZT', 'POTOM', 'POTYA', 'POZŐR', 'PÓKER', 'PÓLÓS', 'PÓLUS', 'PÓLYA', 'PÓRÁZ', 'PÓRUS', 'PÓTOL', 'PÓZNA', 'PÓZOL',
-        'PÖCÖK', 'PÖDÖR', 'PÖFÖG', 'PÖRÖG', 'PÖTTY', 'PÖSZE', 'PRÉDA', 'PRÉRI', 'PRÍMA', 'PROCC', 'PROFI', 'PROLI', 'PRÓBA', 'PRÓZA',
-        'PUCÉR', 'PUCOL', 'PUCCS', 'PUDLI', 'PUFOG', 'PUFÓK', 'PUHÍT', 'PUHUL', 'PUMPA', 'PUNCS', 'PURDÉ', 'PUSKA', 'PUSZI', 'PUTRI',
-        'PUZÓN', 'PÚDER', 'PÚPOS', 'PÚPOZ', 'PÜFÖL', 'PÜLÓN', 'PÜRÉS'
+        'PÖCÖK', 'PÖDÖR', 'PÖFÖG', 'PÖRGŐ', 'PÖRÖG', 'PÖSZE', 'PÖTTY', 'PRÉDA', 'PRÉRI', 'PRÍMA', 'PROCC', 'PROFI', 'PROLI', 'PRÓBA',
+        'PRÓZA', 'PUCÉR', 'PUCOL', 'PUCCS', 'PUDLI', 'PUFOG', 'PUFÓK', 'PUHÍT', 'PUHUL', 'PUMPA', 'PUNCS', 'PURDÉ', 'PUSKA', 'PUSZI',
+        'PUTRI', 'PUZÓN', 'PÚDER', 'PÚPOS', 'PÚPOZ', 'PÜFÖL', 'PÜLÓN', 'PÜRÉS'
     ],
     'R': [
         'RABBI', 'RABLÓ', 'RABNŐ', 'RABOL', 'RADAR', 'RADÍR', 'RADON', 'RAFIA', 'RAGAD', 'RAGOS', 'RAGOZ', 'RAGYA', 'RAJKÓ', 'RAJTA',

@@ -15,6 +15,7 @@ import { GuessesService } from '../../services/guesses.service';
 export class HomeComponent {
     readonly gameTypeEnum = GameType;
     readonly control = new FormControl<GameType>(GameType.WORDLE, { nonNullable: true });
+
     private readonly router = inject(Router);
     private readonly guessesService = inject(GuessesService);
 

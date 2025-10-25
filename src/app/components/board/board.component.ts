@@ -33,6 +33,10 @@ export class BoardComponent implements OnInit {
             .subscribe(state => this.updateBoard(state));
     }
 
+    isSolution(word: Array<Letter>): boolean {
+        return word.map(letter => letter.value).join('') === this.wordToGuess();
+    }
+
     private initBoard(): void {
         const board: Board = { lines: [], activeLineIndex: 0 };
 

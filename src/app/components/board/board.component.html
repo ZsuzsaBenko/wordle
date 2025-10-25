@@ -9,9 +9,10 @@
             @for (letter of word; let j = $index; track j) {
                 <div class="letter"
                      [ngClass]="{
-                     'yellow': line.status === lineStatusEnum.FINISHED &&  letter.status === 'CONTAINED',
+                     'yellow': line.status === lineStatusEnum.FINISHED && letter.status === 'CONTAINED',
                      'green': line.status === lineStatusEnum.FINISHED && letter.status === 'CORRECT',
-                     'red': showError() && line.status === lineStatusEnum.ACTIVE
+                     'red': showError() && line.status === lineStatusEnum.ACTIVE,
+                     'success': line.status === lineStatusEnum.FINISHED && isSolution(word)
                      }">
                     {{ letter.value }}
                 </div>

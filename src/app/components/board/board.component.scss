@@ -11,6 +11,7 @@
     .line {
         display: flex;
         flex-wrap: nowrap;
+        position: relative;
 
         &.active .letter {
             background-color: colors.$white;
@@ -48,8 +49,20 @@
             &.red {
                 color: colors.$red;
             }
+
+            &.success {
+                animation: success 0.5s 5 ease-in-out;
+            }
         }
     }
+}
+
+@keyframes success {
+    30% { transform: scale(1.1); }
+    40%, 60% { transform: rotate(-20deg) scale(1.1); }
+    50% { transform: rotate(20deg) scale(1.1); }
+    70% { transform: rotate(0deg) scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 :host.wordle .board {
@@ -117,7 +130,7 @@
         }
     }
 
-    & .line:not(.active) .letter {
+    & .line:not(.active) .letter:not(.success) {
         height: 18px;
         border-radius: 2px;
         font-size: 14px;

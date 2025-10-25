@@ -19,6 +19,7 @@ import { GuessesService } from '../../services/guesses.service';
 export class KeyboardComponent {
     readonly wordsToGuess = input.required<Array<string>>();
     readonly keyboard: WritableSignal<Array<Key>> = signal([]);
+
     private readonly keyboardCharacters = 'AÁBCDEÉFGHIÍJKLMNOÓÖŐPRSTUÚÜŰVXYZ';
     private readonly guessesService = inject(GuessesService);
     private readonly extendedWordsToGuess: Signal<Array<string>> = computed(() => this.extendWordsToGuess());
