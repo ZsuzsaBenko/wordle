@@ -40,6 +40,7 @@ export class GameComponent implements OnInit {
         if (event.key === 'Enter') {
             this.guessesService.updateGuesses({ action: ActionType.SUBMIT });
         } else if (event.key === 'Backspace') {
+            event.preventDefault();
             this.guessesService.updateGuesses({ action: ActionType.DELETE });
         } else {
             if (this.allowedCharacters.includes(event.key)) {
