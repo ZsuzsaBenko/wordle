@@ -1,6 +1,6 @@
 import { ActionType, LineStatus } from './enums';
 
-export type LetterStatus = 'UNKNOWN' | 'CONTAINED' | 'CORRECT' | 'ABSENT';
+export type LetterStatus = 'UNKNOWN' | 'CONTAINED' | 'CORRECT_ELSEWHERE' | 'CORRECT' | 'ABSENT';
 
 export interface Board {
     lines: Array<Line>;

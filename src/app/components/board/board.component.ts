@@ -3,7 +3,7 @@ import { Component, DestroyRef, inject, input, OnInit, output, signal, WritableS
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, EMPTY, of, skip } from 'rxjs';
 import { ActionType, LineStatus } from '../../enums';
-import { Board, GuessesState, Letter, Line } from '../../interfaces';
+import { Board, GuessesState, Letter, LetterStatus, Line } from '../../interfaces';
 import { GuessesService } from '../../services/guesses.service';
 
 @Component({
@@ -96,8 +96,7 @@ export class BoardComponent implements OnInit {
                 const character = guess[i];
                 const letter: Letter = {
                     value: character,
-                    status: this.wordToGuess().includes(character) ?
-                        this.wordToGuess()[i] === character ? 'CORRECT' : 'CONTAINED' : 'ABSENT'
+                    status: this.getLetterStatus(guess, character, i)
                 };
                 letters.push(letter);
             } else {
@@ -107,4 +106,29 @@ export class BoardComponent implements OnInit {
 
         return letters;
     }
+
+    private getLetterStatus(guess: string, character: string, index: number): LetterStatus {
+        const countInWordToGuess = this.wordToGuess().split('').filter(char => char === character).length;
+        if (countInWordToGuess === 0) {
+            return 'ABSENT';
+        }
+
+        if (this.wordToGuess()[index] === character) {
+            return 'CORRECT';
+        }
+
+        let found = 0;
+        for (let i = 0; i < 5; i++) {
+            if (this.wordToGuess()[i] === character && guess[i] === character) {
+                found++;
+            }
+        }
+
+        if (found === countInWordToGuess) {
+            return 'CORRECT_ELSEWHERE';
+        }
+
+        return 'CONTAINED';
+    }
+
 }
