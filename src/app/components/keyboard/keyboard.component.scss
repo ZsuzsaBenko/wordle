@@ -9,9 +9,13 @@
     justify-content: center;
     position: relative;
 
-    @include media-queries.tablet-size {
+    @include media-queries.media(tablet) {
         margin: 50px auto;
         width: 450px;
+    }
+
+    @include media-queries.media(low-res) {
+        margin: 0 auto;
     }
 
     .key {
@@ -21,9 +25,14 @@
         height: 36px;
         border-radius: 5px;
 
-        @include media-queries.tablet-size {
+        @include media-queries.media(tablet) {
             width: 40px;
             height: 40px;
+        }
+
+        @include media-queries.media(low-res) {
+            width: 36px;
+            height: 36px;
         }
 
         .background {
@@ -37,9 +46,14 @@
                 height: 18px;
                 background-color: colors.$white;
 
-                @include media-queries.tablet-size {
+                @include media-queries.media(tablet) {
                     width: 20px;
                     height: 20px;
+                }
+
+                @include media-queries.media(low-res) {
+                    width: 18px;
+                    height: 18px;
                 }
 
                 &.top-left {
@@ -105,27 +119,42 @@
         text-align: center;
         cursor: pointer;
 
-        @include media-queries.tablet-size {
+        @include media-queries.media(tablet) {
             width: 64px;
             height: 40px;
             font-size: 24px;
             line-height: 44px;
         }
+
+        @include media-queries.media(low-res) {
+            width: 58px;
+            height: 36px;
+            line-height: 40px;
+            font-size: 22px;
+        }
     }
 
     button.delete {
         left: 6px;
+
+        @include media-queries.media(low-res) {
+            left: 22px;
+        }
     }
 
     button.submit {
         right: 6px;
+
+        @include media-queries.media(low-res) {
+            right: 22px;
+        }
     }
 
 }
 
 :host.quordle .keyboard {
 
-    @include media-queries.small-mobile-size {
+    @include media-queries.media(small-mobile) {
 
         .key {
             width: 28px;

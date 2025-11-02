@@ -1,3 +1,33 @@
+@mixin media($keys...) {
+    @each $key in $keys {
+        @if ($key == small-mobile) {
+            @include small-mobile-size {
+                @content
+            }
+        } @else if ($key == large-mobile) {
+            @include large-mobile-size {
+                @content
+            }
+        } @else if ($key == tablet) {
+            @include tablet-size {
+                @content
+            }
+        } @else if ($key == low-res) {
+            @include low-res-desktop-size {
+                @content
+            }
+        } @else if ($key == small-desktop) {
+            @include small-desktop-size {
+                @content
+            }
+        } @else if ($key == large-desktop) {
+            @include large-desktop-size {
+                @content
+            }
+        }
+    }
+}
+
 @mixin small-mobile-size {
     @media screen and (max-width: 405px) {
         @content;
@@ -16,14 +46,20 @@
     }
 }
 
+@mixin low-res-desktop-size {
+    @media screen and (min-width: 900px) and (max-height: 899px) {
+        @content;
+    }
+}
+
 @mixin small-desktop-size {
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 900px) and (min-height: 900px) {
         @content;
     }
 }
 
 @mixin large-desktop-size {
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1200px) and (min-height: 900px) {
         @content;
     }
 }

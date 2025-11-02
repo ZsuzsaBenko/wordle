@@ -9,7 +9,7 @@
     margin: 0 auto;
     text-align: center;
 
-    @include media-queries.tablet-size {
+    @include media-queries.media(tablet) {
         width: 700px;
     }
 

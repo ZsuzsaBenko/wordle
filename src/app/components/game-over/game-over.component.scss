@@ -5,7 +5,7 @@
     text-align: center;
     margin: 10px auto 50px;
 
-    @include media-queries.tablet-size {
+    @include media-queries.media(tablet) {
         margin: 20px auto 50px;
     }
 
@@ -14,7 +14,7 @@
         font-size: 16px;
         font-weight: bold;
 
-        @include media-queries.small-desktop-size {
+        @include media-queries.media(small-desktop) {
             font-size: 18px;
         }
 
